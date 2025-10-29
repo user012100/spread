@@ -30,8 +30,11 @@ h2 {
     font-weight: 700;
     letter-spacing: -0.38rem;
     text-transform: lowercase;
-    padding-inline-start: 2.5rem;
-    padding-inline-end: 2.5rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 2.5rem;
+    background-color: #4800C0;
+    display: flow-root;
+    inline-size: fit-content;
 }
 
 /* RMB to change the color for H2*/
