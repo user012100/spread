@@ -7,7 +7,7 @@
 p {
     line-height: 145%;
     letter-spacing: -0.05rem;
-     margin-block-start: 1.5rem;
+    margin-block-start: 1.5rem;
     margin-block-end: 1.5rem;
     padding-inline-start: 2.5rem;
     padding-inline-end: 2.5rem;
@@ -75,4 +75,29 @@ h2 {
 
 .author {
     font-size: 90%;
+}
+
+.about {
+    color: black;
+    font-weight: 600;
+    margin-inline-start: 1rem;
+    background-color: #F46738;
+    width: 93vw;
+
+    &::before,
+    &::after {
+		content: ''; /* Gives us “empty” pseudos to work with. */
+		display: block;
+		visibility: hidden; /* We don’t need to see it or click it. */
+	}
+
+    &::before { padding-block-start: -0.25em; }
+	&::after { padding-block-end: -0.23em; }
+
+    p {
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+        font-size: 95%;
+        line-height: 115%;
+    }
 }
