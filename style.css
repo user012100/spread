@@ -81,10 +81,8 @@ h2 {
     color: black;
     font-weight: 600;
     margin-inline-start: 1rem;
-    
+    margin-inline-end: 1rem;
     background-color: #F46738;
-    width: 93vw;
-    inline-size: fit-content;
 
     p {
         padding-inline-start: 1rem;
@@ -100,5 +98,9 @@ h2 {
 	}
 
 	&::after { margin-block-end: -1em; }
+}
 
+.credits {
+    font-weight: 600;
+    display: flex;
 }
