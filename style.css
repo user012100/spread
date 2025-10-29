@@ -44,7 +44,7 @@ h2 {
 	}
 
     &::before { margin-block-start: -0.25em; }
-	&::after { margin-block-end: -0.23em; }
+	&::after { margin-block-end: -0.25em; }
 }
 
 /* RMB to change the color for H2*/
