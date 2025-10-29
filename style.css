@@ -3,7 +3,7 @@
     font-family: Helvetica, sans-serif;
     font-size: 120%;
 }
-/* test */
+
 p {
     line-height: 145%;
     letter-spacing: -0.05rem;
@@ -13,14 +13,50 @@ p {
     padding-inline-end: 2.5rem;
 }
 
+header {
+    p:nth-child(1) {
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        margin-block-start: -1.35rem;
+        margin-inline-start: -1rem; 
+    }
+
+    a {
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        text-align: right;
+        right: 0;
+        margin-block-start: -1.5rem;
+        margin-inline-end: 0.8rem;
+        background-color: #B9FF00;
+    }
+}
+
 h1 {
-    color: black;
+    color: #BEBEBE;
     font-size: 6rem;
     font-weight: 700;
     letter-spacing: -0.38rem;
     line-height: 4.4rem;
-    padding-inline-start: 2.5rem;
-    padding-inline-end: 2.5rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+    margin-block-start: 4rem;
+    background-color: #4800C0;
+    display: flow-root;
+    inline-size: fit-content;
+    width: 93vw;
+
+    &::before,
+    &::after {
+		content: ''; /* Gives us “empty” pseudos to work with. */
+		display: block;
+		visibility: hidden; /* We don’t need to see it or click it. */
+	}
+
+    &::before { margin-block-start: -0.1em; }
+	&::after { margin-block-end: -0.03em; }
 }
 
 /* RMB to change the color H1 */
