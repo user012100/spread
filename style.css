@@ -81,8 +81,10 @@ h2 {
     color: black;
     font-weight: 600;
     margin-inline-start: 1rem;
+    
     background-color: #F46738;
     width: 93vw;
+    inline-size: fit-content;
 
     p {
         padding-inline-start: 1rem;
@@ -90,4 +92,13 @@ h2 {
         font-size: 85%;
         line-height: 120%;
     }
+
+    &::after {
+		content: ''; /* Gives us “empty” pseudos to work with. */
+		display: block;
+		visibility: hidden; /* We don’t need to see it or click it. */
+	}
+
+	&::after { margin-block-end: -1em; }
+
 }
