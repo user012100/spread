@@ -83,16 +83,7 @@ h2 {
     margin-inline-start: 1rem;
     background-color: #F46738;
     width: 93vw;
-
-    &::before,
-    &::after {
-		content: ''; /* Gives us “empty” pseudos to work with. */
-		display: block;
-		visibility: hidden; /* We don’t need to see it or click it. */
-	}
-
-    &::before { padding-block-start: -0.25em; }
-	&::after { padding-block-end: -0.23em; }
+    block-size: 50vh;
 
     p {
         padding-inline-start: 1rem;
