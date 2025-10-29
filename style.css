@@ -9,7 +9,7 @@ p {
     letter-spacing: -0.05rem;
     margin-block-start: 1.5rem;
     margin-block-end: 1.5rem;
-    padding-inline-start: 2.5rem;
+    padding-inline-start: 10vw;
     padding-inline-end: 2.5rem;
 }
 
@@ -29,7 +29,7 @@ header {
         text-align: right;
         right: 0;
         margin-block-start: -1.5rem;
-        margin-inline-end: 0.8rem;
+        margin-inline-end: 5vw;
         background-color: #B9FF00;
     }
 }
@@ -40,7 +40,7 @@ h1 {
     font-weight: 700;
     letter-spacing: -0.38rem;
     line-height: 4.4rem;
-    margin-inline-start: 1rem;
+    margin-inline-start: 5vw;
     margin-inline-end: 1rem;
     margin-block-start: 4rem;
     background-color: #4800C0;
@@ -66,7 +66,7 @@ h2 {
     font-weight: 700;
     letter-spacing: -0.45rem;
     text-transform: lowercase;
-    margin-inline-start: 1rem;
+    margin-inline-start: 5vw;
     margin-inline-end: 1rem;
     margin-block-start: 4rem;
     background-color: #4800C0;
@@ -93,7 +93,7 @@ h2 {
     position: fixed;
     background-color: #F46738;
     top: 0;
-    margin-inline-start: 1rem;
+    margin-inline-start: 5vw;
     z-index: 9999;
 }
 
@@ -101,9 +101,9 @@ h2 {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.05rem;
-    line-height: 125%;
-    margin-block-start: 2rem;
-    margin-block-end: 2rem;
+    line-height: 110%;
+    margin-block-start: 5rem;
+    margin-block-end: 4rem;
 }
 
 
@@ -114,14 +114,14 @@ h2 {
 .about {
     color: black;
     font-weight: 600;
-    margin-inline-start: 1rem;
+    margin-inline-start: 5vw;
     margin-inline-end: 1rem;
     background-color: #F46738;
     display: grid;
 
     p {
         margin-block-start: -0.5rem;
-        padding-inline-start: 1rem;
+        padding-inline-start: 5vw;
         padding-inline-end: 1rem;
         font-size: 85%;
         line-height: 120%;
@@ -145,7 +145,7 @@ blockquote {
     font-weight: 700;
     padding-block-start: 0.05rem;
     margin-block-start: 3.5rem;
-    margin-inline-start: 1rem;
+    margin-inline-start: 5vw;
     width: 93vw;
     z-index: 0;
     position: relative;
@@ -200,4 +200,23 @@ blockquote {
         margin-block-end: -1rem;
     }
 
+}
+
+/* bigger layout media query */
+
+@media (width > 785px) {
+
+    h1, h2, p, blockquote, .line, .about  {
+        max-width: 60vw;
+        margin-inline-start: 10vw;
+    }
+
+    .about p {
+        padding-inline-start: 0vw;
+    }
+
+    h2 {
+        padding-inline-start: 5vw;
+    }
+    
 }
