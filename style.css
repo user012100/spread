@@ -31,6 +31,8 @@ h2 {
     letter-spacing: -0.45rem;
     text-transform: lowercase;
     margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+    margin-block-start: 4rem;
     background-color: #4800C0;
     display: flow-root;
     inline-size: fit-content;
@@ -56,6 +58,7 @@ h2 {
     background-color: #F46738;
     top: 0;
     margin-inline-start: 1rem;
+    z-index: 9999;
 }
 
 .intro p {
@@ -67,11 +70,6 @@ h2 {
     margin-block-end: 2rem;
 }
 
-.quote {
-    font-weight: 700;
-    margin-block-start: 2rem;
-    margin-block-end: 2rem;
-}
 
 .author {
     font-size: 90%;
@@ -83,24 +81,87 @@ h2 {
     margin-inline-start: 1rem;
     margin-inline-end: 1rem;
     background-color: #F46738;
+    display: grid;
 
     p {
+        margin-block-start: -0.5rem;
         padding-inline-start: 1rem;
         padding-inline-end: 1rem;
         font-size: 85%;
         line-height: 120%;
     }
 
-    &::after {
-		content: ''; /* Gives us “empty” pseudos to work with. */
-		display: block;
-		visibility: hidden; /* We don’t need to see it or click it. */
-	}
-
-	&::after { margin-block-end: -1em; }
+    p:nth-child(3) {
+        margin-block-end: -0.5rem;
+    }
 }
 
 .credits {
-    font-weight: 600;
+    font-weight: 400;
     display: flex;
+}
+
+blockquote {
+    background-color: #F90AF5;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 125%;
+    font-weight: 700;
+    padding-block-start: 0.05rem;
+    margin-block-start: 3.5rem;
+    margin-inline-start: 1rem;
+    width: 93vw;
+    z-index: 0;
+    position: relative;
+    display: grid;
+
+    p {
+        margin-inline-start: -1rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    p:nth-child(1) {
+        margin-block-start: -0.8rem;
+        margin-block-end: -0.25rem;
+    }
+
+    p:nth-child(2) {
+        margin-block-end: -0.8rem;
+    }
+
+    p.quote-two {
+        margin-block-end: -0.8rem;
+    }
+
+    &::before {
+		content: '“';
+		position: absolute;
+        margin-top: -2.1rem;
+        font-style: normal;
+        font-size: 10rem;
+        color: #BEBEBE;
+        z-index: 1;
+	}
+
+    &::after {
+        content: '”';
+		position: absolute;
+        bottom: -7rem;
+        right: -0.1rem;
+        font-style: normal;
+        font-size: 10rem;
+        color: #BEBEBE;
+        z-index: 1;
+    }
+}
+
+.author {
+    color: #F90AF5;
+    font-weight: 500;
+
+    p:nth-child(1) {
+        margin-block-end: -1rem;
+    }
+
 }
