@@ -284,14 +284,17 @@ footer {
 
 /* bigger layout media query */
 @media (width > 785px) {
+	/* changing header style */
 	header {
 		max-width: 60vw;
 		margin-inline-start: 5vw;
 
+		/* adjusting steven heller spacing */
 		a {
 			margin-inline-end: 7.5vw;
 		}
 
+		/* h1 style adjustments */
 		h1 {
 			font-size: 10rem;  /* increase size */
 			line-height: 7.2rem; /* adjust spacing so it doesn’t overlap */
@@ -300,11 +303,13 @@ footer {
 
 			margin-block-start: 15vh;
 
+			/* cinching the box */
 			&::before { margin-block-start: -0.04em; }
 			&::after { margin-block-end: -0.02em; }
 		}
 	}
 
+	/* changing intro style */
 	.intro {
 		margin-inline-start: -2.5vw;
 		margin-block-start: 15vh;
@@ -314,15 +319,21 @@ footer {
 		}
 	}
 
-	h2, .line {
+	/* changing line style */
+	.line {
 		max-width: 80vw;
 		margin-inline-start: 10vw;
 	}	
 
+	/* changing subheadings style */
 	h2 {
 		margin-block-start: 12vh;
+		max-width: 80vw;
+		padding-inline-start: 5vw;
+		margin-inline-start: 10vw;
 	}
 
+	/* changing quote style */
 	blockquote {
 		margin-inline-start: 10vw;
 		margin-block-start: 10vh;
@@ -335,25 +346,28 @@ footer {
 		}
 	}
 
+	/* targetting body text except for blockquotes p's */
 	section p:not(blockquote p) {
 		margin-inline-start: 10vw;
 		max-width: 85vw;
 		line-height: 160%;
 	}
 
-	h2 {
-		padding-inline-start: 5vw;
-	}
-
 	footer .about {
 		margin-inline-start: 10vw;
+
+		p {
+			margin-inline-start: 5vw;
+			max-width: 120ch;
+		}
 	}
 
-	.about p {
-		margin-inline-start: 5vw;
+	.credits p {
+		margin-inline-end: 1vw;
 	}
 }
 
+/* print layout */
 @media print {
 	:root {
 		background-color: #FFFFFF;
