@@ -1,222 +1,250 @@
+/* base styles */
 :root {
-    background-color: #BEBEBE;
-    font-family: Helvetica, sans-serif;
-    font-size: 120%;
+	background-color: #BEBEBE;
+	font-family: Helvetica, sans-serif;
+	font-size: 120%;
 }
 
 p {
-    line-height: 145%;
-    letter-spacing: -0.05rem;
-    margin-block-start: 1.5rem;
-    margin-block-end: 1.5rem;
-    padding-inline-start: 10vw;
-    padding-inline-end: 2.5rem;
+	line-height: 145%;
+	letter-spacing: -0.03rem;
 }
-
-header {
-    p:nth-child(1) {
-        font-weight: 700;
-        text-transform: uppercase;
-        position: absolute;
-        margin-block-start: -1.35rem;
-        margin-inline-start: -1rem; 
-    }
-
-    a {
-        font-weight: 700;
-        text-transform: uppercase;
-        position: absolute;
-        text-align: right;
-        right: 0;
-        margin-block-start: -1.5rem;
-        margin-inline-end: 5vw;
-        background-color: #B9FF00;
-    }
-}
-
-h1 {
-    color: #BEBEBE;
-    font-size: 6rem;
-    font-weight: 700;
-    letter-spacing: -0.38rem;
-    line-height: 4.4rem;
-    margin-inline-start: 5vw;
-    margin-inline-end: 1rem;
-    margin-block-start: 4rem;
-    background-color: #4800C0;
-    display: flow-root;
-    inline-size: fit-content;
-    width: 93vw;
-
-    &::before,
-    &::after {
-		content: ''; /* Gives us “empty” pseudos to work with. */
-		display: block;
-		visibility: hidden; /* We don’t need to see it or click it. */
-	}
-
-    &::before { margin-block-start: -0.1em; }
-	&::after { margin-block-end: -0.03em; }
-}
-
-/* RMB to change the color H1 */
-h2 {
-    color: #BEBEBE;
-    font-size: 5rem;
-    font-weight: 700;
-    letter-spacing: -0.45rem;
-    text-transform: lowercase;
-    margin-inline-start: 5vw;
-    margin-inline-end: 1rem;
-    margin-block-start: 4rem;
-    background-color: #4800C0;
-    display: flow-root;
-    inline-size: fit-content;
-    width: 93vw;
-
-    &::before,
-    &::after {
-		content: ''; /* Gives us “empty” pseudos to work with. */
-		display: block;
-		visibility: hidden; /* We don’t need to see it or click it. */
-	}
-
-    &::before { margin-block-start: -0.25em; }
-	&::after { margin-block-end: -0.25em; }
-}
-
-/* RMB to change the color for H2*/
 
 .line {
-    height: 100vh;
-    width: 0.3rem;
-    position: fixed;
-    background-color: #F46738;
-    top: 0;
-    margin-inline-start: 5vw;
-    z-index: 9999;
+	height: 100vh;
+	width: 0.3em;
+	position: fixed;
+	background-color: #F46738;
+
+	top: 0;
+	margin-inline-start: 5vw;
+	z-index: 9999;
+}
+
+/* header styles */
+header {
+	margin-block-start: 15vh;
+
+	p:nth-child(1) {
+		font-weight: 700;
+		text-transform: uppercase;
+		position: absolute;
+
+		margin-block-start: -1.35rem;
+		margin-inline-start: 7vw;
+	}
+
+	h1 {
+		color: #BEBEBE;
+		font-size: 6rem;
+		font-weight: 700;
+		letter-spacing: -0.64rem;
+		line-height: 4.4rem;
+		background-color: #4800C0;
+
+		margin-block-start: 4rem;
+		margin-inline-start: 5vw;
+		max-width: 90vw;
+
+		display: flow-root;
+		inline-size: fit-content;
+
+		&::before, &::after {
+			content: ''; /* Gives us “empty” pseudos to work with. */
+			display: block;
+			visibility: hidden; /* We don’t need to see it or click it. */
+		}
+
+		&::before { margin-block-start: -0.04em; }
+		&::after { margin-block-end: -0.02em; }
+	}
+
+	a {
+		text-transform: uppercase;
+		position: absolute;
+		right: 0;
+
+		font-weight: 700;
+		padding-inline-start: 0.2em;
+		padding-inline-end: 0.2em;
+
+		margin-inline-end: 4vw;
+	}
+}
+
+a {
+	padding-inline-start: 0.2em;
+	padding-inline-end: 0.2em;
+	background-color: #B9FF00;
 }
 
 .intro p {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.05rem;
-    line-height: 110%;
-    margin-block-start: 5rem;
-    margin-block-end: 4rem;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: -0.05rem;
+	line-height: 105%;
+
+	margin-block-start: 5rem;
+	margin-block-end: 5rem;
+	padding-inline-start: 10vw;
+	padding-inline-end: 7.5vw;
 }
 
+h2 {
+	color: #BEBEBE;
+	font-size: 5rem;
+	font-weight: 700;
+	letter-spacing: -0.49rem;
+	text-transform: lowercase;
+	background-color: #4800C0;
 
-.author {
-    font-size: 90%;
+	margin-inline-start: 5vw;
+	margin-inline-end: 5vw;
+	margin-block-start: 4rem;
+	margin-block-end: 3rem;
+
+	display: flow-root;
+	inline-size: fit-content;
+	width: 90vw;
+
+	&::before,
+	&::after {
+		content: ''; /* Gives us “empty” pseudos to work with. */
+		display: block;
+		visibility: hidden; /* We don’t need to see it or click it. */
+	}
+
+	&::before { margin-block-start: -0.25em; }
+	&::after { margin-block-end: -0.25em; }
 }
 
-.about {
-    color: black;
-    font-weight: 600;
-    margin-inline-start: 5vw;
-    margin-inline-end: 1rem;
-    background-color: #F46738;
-    display: grid;
-
-    p {
-        margin-block-start: -0.5rem;
-        padding-inline-start: 5vw;
-        padding-inline-end: 1rem;
-        font-size: 85%;
-        line-height: 120%;
-    }
-
-    p:nth-child(3) {
-        margin-block-end: -0.5rem;
-    }
-}
-
-.credits {
-    font-weight: 400;
-    display: flex;
+section p {
+	margin-block-start: 5vw;
+	margin-block-end: 5vw;
+	padding-inline-start: 10vw;
+	padding-inline-end: 9vw;
+	line-height: 150%;
+	margin-block-end: 2rem;
 }
 
 blockquote {
-    background-color: #F90AF5;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 125%;
-    font-weight: 700;
-    padding-block-start: 0.05rem;
-    margin-block-start: 3.5rem;
-    margin-inline-start: 5vw;
-    width: 93vw;
-    z-index: 0;
-    position: relative;
-    display: grid;
+	background-color: #F90AF5;
+	font-style: italic;
+	font-weight: 500;
+	font-size: 125%;
+	font-weight: 700;
+	margin-block-start: 3rem;
+	margin-block-end: 3rem;
+	margin-inline-start: 5vw;
+	padding-inline-start: 9vw;
+	max-width: 90vw;
+	z-index: 0;
+	position: relative;
+	display: grid;
 
-    p {
-        margin-inline-start: -1rem;
-        position: relative;
-        z-index: 2;
-    }
-
-    p:nth-child(1) {
-        margin-block-start: -0.8rem;
-        margin-block-end: -0.25rem;
-    }
-
-    p:nth-child(2) {
-        margin-block-end: -0.8rem;
-    }
-
-    p.quote-two {
-        margin-block-end: -0.8rem;
-    }
-
-    &::before {
-		content: '“';
-		position: absolute;
-        margin-top: -2.1rem;
-        font-style: normal;
-        font-size: 10rem;
-        color: #BEBEBE;
-        z-index: 1;
+	p {
+		margin-inline-start: -1rem;
+		margin-block-start: 2rem;
+		line-height: 130%;
+		position: relative;
+		z-index: 2;
 	}
 
-    &::after {
-        content: '”';
+	p:nth-child(1) {
+		margin-block-start: -0.8rem;
+		margin-block-end: -0.25rem;
+	}
+
+	p:nth-child(2) {
+		margin-block-end: -0.8rem;
+	}
+
+	p.quote-two {
+		margin-block-end: -0.8rem;
+	}
+
+	&::before {
+		content: '“';
 		position: absolute;
-        bottom: -7rem;
-        right: -0.1rem;
-        font-style: normal;
-        font-size: 10rem;
-        color: #BEBEBE;
-        z-index: 1;
-    }
+		margin-top: -2.1rem;
+		font-style: normal;
+		font-size: 10rem;
+		color: #BEBEBE;
+		z-index: 1;
+	}
+
+	&::after {
+		content: '”';
+		position: absolute;
+		bottom: -7rem;
+		right: -0.1rem;
+		font-style: normal;
+		font-size: 10rem;
+		color: #BEBEBE;
+		z-index: 1;
+	}
 }
 
 .author {
-    color: #F90AF5;
-    font-weight: 500;
+	font-size: 90%;
+	color: #F90AF5;
+	font-weight: 700;
+	margin-block-start: 2rem;
+	margin-block-end: 2rem;
 
-    p:nth-child(1) {
-        margin-block-end: -1rem;
-    }
+	p {
+		letter-spacing: -0.01em;
+	}
 
+	p:nth-child(1) {
+		margin-block-end: -1rem;
+	}
+
+}
+
+.about {
+	color: black;
+	font-weight: 600;
+	margin-block-start: 4rem;
+	margin-inline-start: 5vw;
+	margin-inline-end: 1rem;
+	background-color: #F46738;
+	display: grid;
+
+	p {
+		margin-block-start: -0.5rem;
+		padding-inline-start: 5vw;
+		padding-inline-end: 1rem;
+		font-size: 85%;
+		line-height: 120%;
+	}
+
+	p:nth-child(3) {
+		margin-block-end: -0.5rem;
+	}
+}
+
+.credits {
+	margin-block-start: 4rem;
+	font-weight: 700;
+	display: flex;
 }
 
 /* bigger layout media query */
 
 @media (width > 785px) {
 
-    h1, h2, p, blockquote, .line, .about  {
-        max-width: 60vw;
-        margin-inline-start: 10vw;
-    }
+	h1, h2, p, blockquote, .line, .about  {
+		max-width: 60vw;
+		margin-inline-start: 10vw;
+	}
 
-    .about p {
-        padding-inline-start: 0vw;
-    }
+	.about p {
+		padding-inline-start: 0vw;
+	}
 
-    h2 {
-        padding-inline-start: 5vw;
-    }
-    
+	h2 {
+		padding-inline-start: 5vw;
+	}
+	
 }
