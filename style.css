@@ -294,14 +294,14 @@ footer {
 
 		h1 {
 			font-size: 10rem;  /* increase size */
-			line-height: 6rem; /* adjust spacing so it doesn’t overlap */
+			line-height: 7.2rem; /* adjust spacing so it doesn’t overlap */
 			width: 100vw;
-			letter-spacing: -0.1em;
+			letter-spacing: -0.104em;
 
 			margin-block-start: 15vh;
 
-			&::before { margin-block-start: 0.02em; }
-			&::after { margin-block-end: 0.03em; }
+			&::before { margin-block-start: -0.04em; }
+			&::after { margin-block-end: -0.02em; }
 		}
 	}
 
