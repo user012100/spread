@@ -3,6 +3,10 @@
 	background-color: #BEBEBE;
 	font-family: Helvetica, sans-serif;
 	font-size: 120%;
+	p {
+	 margin-top: 1rem;
+     margin-bottom: 1rem;
+	}
 }
 
 p {
@@ -209,8 +213,9 @@ blockquote {
 	font-size: 90%;
 	color: #F90AF5;
 	font-weight: 700;
-	margin-block-start: 2rem;
+	margin-block-start: -3rem;
 	margin-block-end: 2rem;
+	margin-top: 0.3rem;
 
 	p {
 		letter-spacing: -0.01em;
@@ -220,6 +225,10 @@ blockquote {
 		margin-block-end: -1rem;
 	}
 
+}
+
+.author p + p {
+  margin-top: 1rem;
 }
 
 /* footer style */
@@ -263,7 +272,7 @@ footer {
 /* bigger layout media query */
 @media (width > 785px) {
 
-	h1, h2, p, blockquote, .line, .about  {
+	h2, p, blockquote, .line, .about  {
 		max-width: 60vw;
 		margin-inline-start: 10vw;
 	}
@@ -276,4 +285,29 @@ footer {
 		padding-inline-start: 5vw;
 	}
 	
+.author {
+		padding-inline-start: 8vw;
+	}
 }
+
+@media (width > 785px) {
+
+	header {
+		max-width: 60vw;
+		margin-inline-start: 5vw;
+	}
+
+	header a {
+		margin-inline-end: 20vw;     
+		margin-block-start: -2vw;   
+	}
+}
+
+@media (min-width: 785px) {
+ header h1 {
+    font-size: 8rem;  /* increase size */
+    line-height: 6rem; /* adjust spacing so it doesn’t overlap */
+	width: 60rem;
+  }
+}
+	
