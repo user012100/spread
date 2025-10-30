@@ -240,6 +240,7 @@ blockquote {
 footer {
 	z-index: 5;
 	background-color: #BEBEBE;
+	position: relative;
 
 	/* little section about the author and publication */
 	.about {
