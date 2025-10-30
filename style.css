@@ -307,9 +307,11 @@ footer {
 
 	.intro {
 		margin-inline-start: -2.5vw;
-		/* max-width: 80ch; */
-		margin-block-start: 20vh;
-		margin-block-end: 15vh;
+		margin-block-start: 15vh;
+		margin-block-end: 17vh;
+		p {
+			font-size: 250%;
+		}
 	}
 
 	h2, .line {
@@ -318,11 +320,13 @@ footer {
 	}	
 
 	h2 {
-		margin-block-start: 10vh;
+		margin-block-start: 12vh;
 	}
 
 	blockquote {
 		margin-inline-start: 10vw;
+		margin-block-start: 10vh;
+		margin-block-end: 10vh;
 		max-width: 80vw;
 
 		p {
@@ -356,13 +360,15 @@ footer {
 	}
 
 	header {
+		margin-block-start: -1rem;
+
 		h1 {
 			color: #FFFFFF;
 			background-color: #484848;
 			font-size: 7rem;
 		}
 		a {
-			margin-block-start: -1.2rem;
+			margin-block-start: -1rem;
 			background-color: #a2a2a2;
 		}
 	}
@@ -375,6 +381,10 @@ footer {
 		color: #FFFFFF;
 		background-color: #484848;
 		max-width: 10ch;
+	}
+
+	.last-h2 {
+		break-before: page;
 	}
 
 	blockquote {
@@ -410,7 +420,9 @@ footer {
 		}
 
 		.credits {
+			/* trying to hide the line at the end of the print layout */
 			background-color: #FFFFFF;
+			height: 11.75rem;
 		}
 	}
 }
