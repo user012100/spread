@@ -289,7 +289,7 @@ footer {
 		margin-inline-start: 5vw;
 
 		a {
-			margin-inline-end: 20vw;
+			margin-inline-end: 7.5vw;
 		}
 
 		h1 {
@@ -338,6 +338,7 @@ footer {
 	section p:not(blockquote p) {
 		margin-inline-start: 10vw;
 		max-width: 85vw;
+		line-height: 160%;
 	}
 
 	h2 {
