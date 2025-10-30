@@ -161,7 +161,8 @@ blockquote {
 	max-width: 90vw;
 	z-index: 0;
 	position: relative;
-	display: grid;
+	display: flow-root;
+	/* Michael was stumped by this: wouldn’t collapse negative margin with grid parent */
 
 	/* quote text style */
 	p {
@@ -285,22 +286,60 @@ footer {
 
 /* bigger layout media query */
 @media (width > 785px) {
-
-	h2, p, blockquote, .line {
+	header {
 		max-width: 60vw;
-		margin-inline-start: 10vw;
+		margin-inline-start: 5vw;
+
+		a {
+			margin-inline-end: 20vw;
+		}
+
+		h1 {
+			font-size: 10rem;  /* increase size */
+			line-height: 6rem; /* adjust spacing so it doesn’t overlap */
+			width: 100vw;
+			letter-spacing: -0.1em;
+
+			margin-block-start: 15vh;
+
+			&::before { margin-block-start: 0.02em; }
+			&::after { margin-block-end: 0.03em; }
+		}
 	}
 
-	.about p {
-		padding-inline-start: 0vw;
+	.intro {
+		margin-inline-start: -2.5vw;
+		/* max-width: 80ch; */
+		margin-block-start: 20vh;
+		margin-block-end: 15vh;
+	}
+
+	h2, .line {
+		max-width: 80vw;
+		margin-inline-start: 10vw;
+	}	
+
+	h2 {
+		margin-block-start: 10vh;
+	}
+
+	blockquote {
+		margin-inline-start: 10vw;
+		max-width: 80vw;
+
+		p {
+			margin-inline-start: -1rem;
+			max-width: 70ch;
+		}
+	}
+
+	section p:not(blockquote p) {
+		margin-inline-start: 10vw;
+		max-width: 85vw;
 	}
 
 	h2 {
 		padding-inline-start: 5vw;
-	}
-	
-.author {
-		margin-inline-start: 0rem;
 	}
 
 	footer .about {
@@ -308,30 +347,7 @@ footer {
 	}
 
 	.about p {
-		margin-inline-start: 2rem;
-	}
-
-	blockquote p {
-		margin-inline-start: -8rem;
-	}
-
-	header {
-		max-width: 60vw;
 		margin-inline-start: 5vw;
-	}
-
-	header a {
-		margin-inline-end: 20vw;     
-		margin-block-start: -2vw;   
-	}
-
-	header h1 {
-		font-size: 8rem;  /* increase size */
-		line-height: 6rem; /* adjust spacing so it doesn’t overlap */
-		width: 60rem;
-		letter-spacing: -0.1em;
-		&::before { margin-block-start: -0.05em; }
-		&::after { margin-block-end: -0.04em; }
 	}
 }
 
@@ -366,7 +382,7 @@ footer {
 	blockquote {
 		background-color: #d3d3d3;
 		position: relative;
-		display: grid;
+		display: flow-root;
 
 		&::before, &::after {
 			color: #FFFFFF;
@@ -386,14 +402,15 @@ footer {
 	}
 
 	footer {
-		margin-block-start: 2rem;
+		margin-block-start: -2rem;
 		background-color: #FFFFFF;
+		position: relative;
 
 		.about {
 			background-color: #c5c5c5;
 			max-width: 70ch;
 		}
-		
+
 		.credits {
 			background-color: #FFFFFF;
 		}
