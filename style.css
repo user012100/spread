@@ -240,7 +240,7 @@ footer {
 	.about {
 		color: black;
 		font-weight: 600;
-		margin-block-start: 9rem;
+		margin-block-start: 7rem;
 		margin-inline-start: 5vw;
 		margin-inline-end: 1rem;
 		background-color: #F46738;
@@ -272,7 +272,7 @@ footer {
 /* bigger layout media query */
 @media (width > 785px) {
 
-	h2, p, blockquote, .line, .about  {
+	h2, p, blockquote, .line {
 		max-width: 60vw;
 		margin-inline-start: 10vw;
 	}
@@ -286,7 +286,19 @@ footer {
 	}
 	
 .author {
-		padding-inline-start: 8vw;
+		margin-inline-start: 8vw;
+	}
+
+	footer .about {
+		margin-inline-start: 10vw;
+	}
+
+	.about p {
+		margin-inline-start: 2rem;
+	}
+
+	blockquote p {
+		margin-inline-start: -8rem;
 	}
 }
 
